@@ -36,7 +36,7 @@
     "eslint": "6.8",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.21.2",
-    "jest": "^24.9.0"
+    "jest": "^29.1.1"
   },
   "bugs": {
     "url": "https://github.com/george-hm/know-parser/issues",
