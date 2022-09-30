@@ -5,7 +5,6 @@
  * @author George Meadows
  */
 class KnowLinks {
-
     /**
      * Returns an array of links found in the text.
      * Duplicates removed.
@@ -26,7 +25,7 @@ class KnowLinks {
         }
 
         return [
-            ... new Set(links)
+            ...new Set(links),
         ];
     }
 
@@ -40,7 +39,7 @@ class KnowLinks {
     grabURL(line) {
         // looking at urls starting with either
         // https, http or www as others are too broad (e.g. window.href)
-        const regex = /(https:\/\/|http:\/\/|www\.)[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/ig;
+        const regex = /(https:\/\/|http:\/\/|www\.)[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:;%_\+.~#?&//=]*)/ig;
         const results = line.match(regex);
 
         return results || [];
@@ -61,6 +60,8 @@ class KnowLinks {
                     return true;
                 }
             }
+
+            return false;
         });
     }
 }
